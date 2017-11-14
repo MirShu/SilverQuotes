@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:text="我"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <com.quantpower.silverquotes.widget.ReboundScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@mipmap/icon_me_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_head"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="用户名：交易小白\n等级LV：0"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/iv_head"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/icon_user_yonghu" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <com.rey.material.widget.TextView
+                    android:id="@+id/tv_me_collection"
+                    style="@style/style_me_list_tv"
+                    android:background="@drawable/setting_item_bg"
+                    android:drawableLeft="@mipmap/icon_collection"
+                    android:text="收藏" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/setting_item_bg">
+
+                    <com.rey.material.widget.TextView
+                        android:id="@+id/tv_me_clean"
+                        style="@style/style_me_list_tv"
+                        android:drawableLeft="@mipmap/icon_clean"
+                        android:text="清除缓存" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="54px"
+                        android:text="0.0KB" />
+                </RelativeLayout>
+
+                <com.rey.material.widget.TextView
+                    android:id="@+id/tv_me_opinion"
+                    style="@style/style_me_list_tv"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/setting_item_bg"
+                    android:drawableLeft="@mipmap/icon_opinion"
+                    android:onClick="onClick"
+                    android:text="意见反馈" />
+
+
+                <com.rey.material.widget.TextView
+                    android:id="@+id/tv_me_about"
+                    style="@style/style_me_list_tv"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/setting_item_bg"
+                    android:drawableLeft="@mipmap/icon_about"
+                    android:onClick="onClick"
+                    android:text="关于我们" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/setting_item_bg">
+
+                    <TextView
+                        style="@style/style_me_list_tv"
+                        android:drawableLeft="@mipmap/icon_vs"
+                        android:text="版本信息" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="54px"
+                        android:text="V1.20" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.quantpower.silverquotes.widget.ReboundScrollView>
+
+</LinearLayout>

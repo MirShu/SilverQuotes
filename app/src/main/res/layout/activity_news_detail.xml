@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f9f9f9"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_empty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="网络不给力，请稍后再试" />
+        </RelativeLayout>
+
+
+        <com.quantpower.silverquotes.widget.ReboundScrollView
+            android:id="@+id/ll_view_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scrollbars="none"
+            android:visibility="visible">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/rl_news_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.quantpower.silverquotes.widget.ScrollViewEx
+                        android:id="@+id/scrollView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/ll_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#f4f5fa"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/detail_news_title"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="28px"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginTop="36px"
+                                    android:textColor="#333333"
+                                    android:textSize="24sp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="36px"
+                                    android:layout_marginLeft="28px"
+                                    android:layout_marginTop="36px"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/detail_news_time"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="#999eb0" />
+
+                                    <TextView
+                                        android:id="@+id/detail_news_by"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="3dp"
+                                        android:textColor="#999eb0" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <WebView
+                                android:id="@+id/detail_webView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:scrollbars="none" />
+
+
+                            <TextView
+                                android:id="@+id/tv_state"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/white"
+                                android:lineSpacingExtra="8px"
+                                android:paddingLeft="28px"
+                                android:paddingRight="3dp"
+                                android:paddingTop="52px"
+                                android:text="@string/tv_statement"
+                                android:textColor="#999eb0" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/white"
+                                android:orientation="horizontal"
+                                android:paddingBottom="32px"
+                                android:paddingLeft="28px"
+                                android:paddingTop="46px">
+
+                                <TextView
+                                    android:id="@+id/tv_original_link"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:drawablePadding="12px"
+                                    android:onClick="onClick"
+                                    android:text="阅读原文"
+                                    android:textColor="#999eb0" />
+
+                                <TextView
+                                    android:id="@+id/tv_complaint"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="28px"
+                                    android:drawableLeft="@mipmap/icon_complaint"
+                                    android:drawablePadding="12px"
+                                    android:gravity="center"
+                                    android:onClick="onClick"
+                                    android:text="投诉"
+                                    android:textColor="@color/color_bababa" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/tv_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8px"
+                                android:background="@android:color/white"
+                                android:gravity="center_vertical"
+                                android:paddingBottom="22px"
+                                android:paddingLeft="28px"
+                                android:paddingTop="22px"
+                                android:text="相关文章"
+                                android:textSize="14sp" />
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="1dp">
+
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/rvRelated"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="#f0f0f0" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </com.quantpower.silverquotes.widget.ScrollViewEx>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_font"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fafafa">
+
+                        <TextView
+                            android:id="@+id/font"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="6dp"
+                            android:text="字体大小" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/font"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/shape_tv_informatin"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/font_min"
+                                style="@style/font_textview_style"
+                                android:text="小"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/font_default"
+                                style="@style/font_textview_style"
+                                android:background="@drawable/shape_font_press"
+                                android:text="默认" />
+
+                            <TextView
+                                android:id="@+id/font_max"
+                                style="@style/font_textview_style"
+                                android:text="大"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </FrameLayout>
+        </com.quantpower.silverquotes.widget.ReboundScrollView>
+
+        <RelativeLayout
+            android:id="@+id/rl_foot"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="#fafafa">
+
+            <View style="@style/view_line_style" />
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:onClick="onClick"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:src="@mipmap/icon_back_black" />
+
+
+            <CheckBox
+                android:id="@+id/iv_disable"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/iv_font"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_check_collection"
+                android:onClick="onClick"
+                android:paddingLeft="8dp" />
+
+            <ImageView
+                android:id="@+id/iv_font"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:onClick="onClick"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:src="@mipmap/icon_font" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

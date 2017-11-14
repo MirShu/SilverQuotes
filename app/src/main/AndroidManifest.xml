@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.quantpower.silverquotes">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name="com.quantpower.silverquotes.base.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name="com.quantpower.silverquotes.ui.activity.GuideActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.quantpower.silverquotes.ui.activity.MainActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.quantpower.silverquotes.ui.activity.ServiceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.quantpower.silverquotes.ui.activity.CollectionActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.quantpower.silverquotes.ui.activity.NewsDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.quantpower.silverquotes.ui.activity.OpinionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.quantpower.silverquotes.ui.activity.AboutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.quantpower.silverquotes.ui.activity.ProductIntroductionActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.quantpower.silverquotes.ui.activity.LiveActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.quantpower.silverquotes.ui.activity.CalendarActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.quantpower.silverquotes.ui.activity.StrategyActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.quantpower.silverquotes.ui.activity.OriginalPageActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="59228c187f2c740e6f001524" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" />
+    </application>
+</manifest>

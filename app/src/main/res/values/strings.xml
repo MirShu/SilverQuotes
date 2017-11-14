@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">白银行情软件</string>
+    <string name="navigation_navigation_bar">NavigationBar</string>
+    <string name="navigation_tab_host">TabHost</string>
+
+    <string name="item_home">首页</string>
+    <string name="item_location">行情中心</string>
+    <string name="item_like">发现</string>
+    <string name="item_person">我</string>
+    <string name="mnPlayerNoNetHint">当前网络不可用,检查网络设置</string>
+    <string name="mnPlayerUrlEmptyHint">播放地址为空</string>
+    <string name="mnPlayerPlayFailHint">视频播放失败</string>
+    <string name="mnPlayerMobileNetHint">请注意,当前网络状态切换为3G/4G网络</string>
+    <string name="tv_statement">声明：本站行情数据均来源网络，不构成任何交易建议，基于本站数据进行交易导致损失，我方概不负责。</string>
+
+
+    <string name="user_from">360企业版</string>
+    <string name="appNumber">4</string>
+
+</resources>

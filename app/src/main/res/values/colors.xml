@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#515151</color>
+    <color name="color_f9f9f9">#f9f9f9</color>
+    <color name="colorPrimaryDark">#0A7E07</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="grey_200">#EEEEEE</color>
+    <color name="grey_300">#E0E0E0</color>
+    <color name="black">#000000</color>
+    <color name="black_1">#333333</color>
+    <color name="amber">#BBFFC107</color>
+    <color name="color_fefefe">#fefefe</color>
+    <color name="color_333448">#333448</color>
+    <color name="color_f2f2f2">#f2f2f2</color>
+    <color name="color_eae6e7">#eae6e7</color>
+    <color name="color_e4e3e1">#e4e3e1</color>
+    <color name="color_e1e5e6">#e1e5e6</color>
+    <color name="color_bababa">#bababa</color>
+    <color name="color_d0d0d0">#d0d0d0</color>
+    <color name="color_878787">#878787</color>
+    <color name="color_47a4f2">#47a4f2</color>
+    <color name="colorPlayerBlackTrans">#bb000000</color>
+    <color name="colorPlayerWhite">#FFFFFF</color>
+    <color name="colorPlayerProgressBg">#e1767676</color>
+    <color name="colorPlayerProgressSecond">#c1c1c1</color>
+    <color name="colorPlayerProgress">#FFFFFF</color>
+</resources>
